@@ -14,7 +14,11 @@ public class PacMan {
   }
 
   public ArrayList<Location> get_valid_moves() {
-    return null;
+    ArrayList<Location> valid_moves = new ArrayList<Location>();
+    valid_moves.add(new Location(myLoc.x + 1, myLoc.y + 1));
+    valid_moves.add(new Location(myLoc.x + 1, myLoc.y));
+    valid_moves.add(new Location(myLoc.x, myLoc.y + 1));
+    return valid_moves;
   }
 
   public boolean move() {
