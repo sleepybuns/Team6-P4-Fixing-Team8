@@ -7,6 +7,9 @@ public class PacMan {
   Map myMap;
   Location shift;
 
+  // comment
+
+  
   public PacMan(String name, Location loc, Map map) {
     this.myLoc = loc;
     this.myName = name;
