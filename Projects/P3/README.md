@@ -10,7 +10,7 @@ Jessy-Manuella Tientcheu, Darian Maitland, Samara Wondimu, Andrew Muirhead
 ### move(String name, Location loc, Type type) 
 * Return type: boolean
 * Description: The purpose of this method is to see where the PacMan can move relative to its current location. If a move is valid then Pacman can move and you return true. Otherwise, you return false.
--
+
 ### consume()
 -
 ### is_ghost_in_range()
@@ -18,20 +18,21 @@ Jessy-Manuella Tientcheu, Darian Maitland, Samara Wondimu, Andrew Muirhead
 
 ### get_valid_moves()
 
--
+
 
 ## Ghost Class
 
 ### get_valid_moves()
 * Return type: ArrayList<Location>()
 * Description: The purpose of this method is to the different locations a ghost can move relative to its current location. A ghost can only move up.
--
+
 ### move()
 -
 ### is_pacman_in_range()
 -
 ### attack()
 
+  
 ## Map Class
 
 ### move(String name, Location loc, Type type)
@@ -41,6 +42,6 @@ Jessy-Manuella Tientcheu, Darian Maitland, Samara Wondimu, Andrew Muirhead
 ### attack(String name)
 * Return type: boolean
 * Description: The purpose of this method is to get the ghost to attack the pacman. If ghost is at the exact location of pacman, then ghost is able to attack the pacman and return true. If not, then return false.
--
+
 ### eatCookie(String name)
 -
