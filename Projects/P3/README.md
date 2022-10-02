@@ -2,37 +2,22 @@
 ## Group Members
 Jessy-Manuella Tientcheu, Darian Maitland, Samara Wondimu, Andrew Muirhead
 
-## Project Demo
-
 ## How to Run Code
 
 
 ## Pacman Class
-### get_valid_moves()
--
-### move()
--
-### is_ghost_in_range()
--
-### consume()
--
-
-## Ghost Class
-### get_valid_moves()
--
-### move()
--
-### is_pacman_in_range()
--
-### attack()
--
-
-## Map Class
-### move(String name, Location loc, Type type)
+### move(String name, Location loc, Type type) 
+* Return type: boolean
+* Description: The purpose of this method is to see where the PacMan can move relative to his current location. If a move is valid then Pacman can move and you return true. Otherwise, you return false.
 -
 ### getLoc(Location loc)
 -
 ### attack(String name)
+
+## get_valid_moves()
+
 -
-### eatCookie(String Name)
--
+
+## Ghost Class
+
+## Map Class
