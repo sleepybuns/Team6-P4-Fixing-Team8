@@ -17,7 +17,14 @@ java -cp "src/" StartMenu
 * Description: The purpose of this method is to see where the PacMan can move relative to its current location. If a move is valid then Pacman can move and you return true. Otherwise, you return false.
 
 ### consume()
--
+* Return type: `JComponent`
+* Description: This method checks to see if a 'power-cookie' item is located in Pacman's current coordinate. If yes, this method calls `map.eatCookie()` and returns the consumed cookie component. Otherwise, the method returns null.
+* Example
+    ```java
+    // pacman at location (10,10)
+    // cookie NOT at location (10,10)
+    pacman.consume() -> null
+    ```
 ### is_ghost_in_range()
 -
 
