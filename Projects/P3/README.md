@@ -63,3 +63,14 @@ java -cp "src/" StartMenu
 
 ### eatCookie(String name)
 -
+### getLoc(Location loc)
+* Return type: `HashSet<Type>`
+* Description: Return what is currently at the location for the given location argument. There could be multiple things at a given location (Empty, Pacman, Cookie, Ghost, Wall)
+* Example
+    ```java
+    // nothing at location (9,1)
+    map.getLoc(new Location (9,1)) -> Map.Type.EMPTY
+    
+    // pacman at location (4,5)
+    map.getLoc(new Location (4,5)) -> Map.Type.PACMAN
+    ```
