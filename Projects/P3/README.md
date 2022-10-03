@@ -28,7 +28,14 @@ java -cp "src/" StartMenu
 * Test Description:
 
 ### is_ghost_in_range()
--
+* Return Type: `Boolean`
+* Description: If the Ghost is within attack range of Pacman, return true and false otherwise.
+* Example:
+    ```java
+     //ghost at location (2,3)
+    //pacman at location (2,4)
+    pacman.is_ghost_in_range() -> true
+     ```
 
 ### get_valid_moves()
 - this method returns an array of all the valid moves that the pacman can take by taking the current location and either incrementing the y-coordinate(upward), the x-coordinate (to the right), or both the x and y coordinates (diagonally forward).
@@ -60,7 +67,14 @@ java -cp "src/" StartMenu
 * Test Description:
     
 ### attack()
-
+ Return Type: `Boolean`
+* Description: Checks if PacMan is in range. If he is the Ghost will attack. If the attack is successful the function will return true, if not it will return false.
+* Example:
+    ```java
+     //ghost at location (2,3)
+    //pacman at location (2,4)
+    ghost.attack() -> true
+     ```
   
 ## Map Class
 
@@ -73,7 +87,14 @@ java -cp "src/" StartMenu
 * Description: The purpose of this method is to get the ghost to attack the pacman. If ghost is at the exact location of pacman, then ghost is able to attack the pacman and return true. If not, then return false.
 
 ### eatCookie(String name)
--
+* Return Type: `JComponent`
+* Description: If the Cookie is in the same location as Pacman, the function returns the Cookie Component and null otherwise.
+* Example:
+    ```java
+     //cookie at location (4,6)
+     //pacman at location (5,6)
+     Map.eatCookie("pacman") -> null
+     ```
 ### getLoc(Location loc)
 * Return type: `HashSet<Type>`
 * Description: Return what is currently at the location for the given location argument. There could be multiple things at a given location (Empty, Pacman, Cookie, Ghost, Wall)
