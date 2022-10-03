@@ -3,7 +3,10 @@
 Jessy-Manuella Tientcheu, Darian Maitland, Samara Wondimu, Andrew Muirhead
 
 ## How to Run Code
-
+```bash
+javac -cp "src/" src/*.java
+java -cp "src/" StartMenu
+```
 
 ## Pacman Class
 
