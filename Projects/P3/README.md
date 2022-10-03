@@ -25,6 +25,8 @@ java -cp "src/" StartMenu
     // cookie NOT at location (10,10)
     pacman.consume() -> null
     ```
+* Test Description:
+
 ### is_ghost_in_range()
 -
 
@@ -55,6 +57,8 @@ java -cp "src/" StartMenu
     ghost.is_pacman_in_range() -> false
     
   ```
+* Test Description:
+    
 ### attack()
 
   
@@ -81,3 +85,4 @@ java -cp "src/" StartMenu
     // pacman at location (4,5)
     map.getLoc(new Location (4,5)) -> Map.Type.PACMAN
     ```
+* Test Description:
