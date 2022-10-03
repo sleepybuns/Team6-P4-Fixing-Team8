@@ -23,6 +23,7 @@ java -cp "src/" StartMenu
 
 ### get_valid_moves()
 - this method returns an array of all the valid moves that the pacman can take by taking the current location and either incrementing the y-coordinate(upward), the x-coordinate (to the right), or both the x and y coordinates (diagonally forward).
+- to test I chose a random location to set my test pacman. Then, I checked to see if the resulting coordinates of pacman.get_valid_moves() gave me the expected result.
 
 
 ## Ghost Class
