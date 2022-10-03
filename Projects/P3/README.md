@@ -17,7 +17,7 @@ Jessy-Manuella Tientcheu, Darian Maitland, Samara Wondimu, Andrew Muirhead
 -
 
 ### get_valid_moves()
-
+- this method returns an array of all the valid moves that the pacman can take by taking the current location and either incrementing the y-coordinate(upward), the x-coordinate (to the right), or both the x and y coordinates (diagonally forward).
 
 
 ## Ghost Class
@@ -27,7 +27,7 @@ Jessy-Manuella Tientcheu, Darian Maitland, Samara Wondimu, Andrew Muirhead
 * Description: The purpose of this method is to the different locations a ghost can move relative to its current location. A ghost can only move up.
 
 ### move()
--
+- this function uses the results of the valid move function and then chooses one location randomly to move the character using Math.random.
 ### is_pacman_in_range()
 * Return type: `boolean`
 * Description: This method supplements the `Ghost.attack()` method, checking the Ghost's surroundings for Pacman. If Pacman is within the attack radius (x±1,y±1) of Ghost then the method returns true, otherwise the method returns false. 
@@ -48,7 +48,7 @@ Jessy-Manuella Tientcheu, Darian Maitland, Samara Wondimu, Andrew Muirhead
 ## Map Class
 
 ### move(String name, Location loc, Type type)
--
+- this function moves the object specified into the location specified by updating all the places where the location of that specific object is stored/accessed.
 ### getLoc(Location loc)
 -
 ### attack(String name)
