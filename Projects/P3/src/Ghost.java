@@ -25,7 +25,18 @@ public class Ghost {
   }
 
   public boolean move() {
-    return false;
+    ArrayList<Location> valid_moves = this.get_valid_moves();
+
+    if(valid_moves.size() == 0) {
+      return false;
+    }
+
+    int random_move = 0 + (int)(Math.random() * ((2 - 0) + 1));
+
+    Location new_loc = valid_moves.get(random_move);
+
+    this.myLoc = new_loc;
+    return true;
   }
 
   public boolean is_pacman_in_range() {
@@ -33,6 +44,13 @@ public class Ghost {
   }
 
   public boolean attack() {
-    return false;
+    if(is_pacman_in_range() == true ) {
+      if(attack(myName)==true) {
+        return true;
+      }
+      return false;
+    } else {
+      return false;
+    }
   }
 }
