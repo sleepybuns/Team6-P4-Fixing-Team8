@@ -29,6 +29,8 @@ Jessy-Manuella Tientcheu, Darian Maitland, Samara Wondimu, Andrew Muirhead
 ### move()
 -
 ### is_pacman_in_range()
+* Return type: boolean
+* Description: This method supplements the Ghost.attack() method, checking the Ghost's surroundings for Pacman. If Pacman is within the attack radius (x±1,y±1) of Ghost then the method returns true, otherwise the method returns false. 
 -
 ### attack()
 
