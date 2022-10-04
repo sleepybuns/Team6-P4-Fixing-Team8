@@ -13,9 +13,14 @@ java -cp "src/" StartMenu
 ## Pacman Class
 
 ### move(String name, Location loc, Type type) 
-* Return type: boolean
+* Return type: `boolean`
 * Description: The purpose of this method is to see where the PacMan can move relative to its current location. If a move is valid then Pacman can move and you return true. Otherwise, you return false.
-
+* Example 
+    ```java
+    // pacman at location (9, 12)
+    pacman.move() -> true
+    pacman.myLoc ∈ {(9, 13), (10, 12)}
+     ```
 ### consume()
 * Return type: `JComponent`
 * Description: This method checks to see if a 'power-cookie' item is located in Pacman's current coordinate. If yes, this method calls `map.eatCookie()` and returns the consumed cookie component. Otherwise, the method returns null.
@@ -45,8 +50,13 @@ java -cp "src/" StartMenu
 ## Ghost Class
 
 ### get_valid_moves()
-* Return type: ArrayList<Location>()
+* Return type: `ArrayList<Location>()`
 * Description: The purpose of this method is to the different locations a ghost can move relative to its current location. A ghost can only move up.
+* Example 
+    ```java
+    // ghost at location (9, 12)
+    ghost.get_valid_moves() -> {(10, 12), (11, 12)}
+     ```
 
 ### move()
 - this function uses the results of the valid move function and then chooses one location randomly to move the character using Math.random.
@@ -61,9 +71,9 @@ java -cp "src/" StartMenu
     ghost.is_pacman_in_range() -> true
     
     //pacman at location (7,2)
-    ghost.is_pacman_in_range() -> false
-    
-  ```
+    ghost.is_pacman_in_range() -> false  
+    ```
+  
 * Test Description:
     
 ### attack()
@@ -83,8 +93,18 @@ java -cp "src/" StartMenu
 ### getLoc(Location loc)
 -
 ### attack(String name)
-* Return type: boolean
+* Return type: `boolean`
 * Description: The purpose of this method is to get the ghost to attack the pacman. If ghost is at the exact location of pacman, then ghost is able to attack the pacman and return true. If not, then return false.
+* Example 
+    ```java
+    // pacman at location (9, 12)
+    // ghost at location (9, 12)
+    ghost.attack() -> true
+    
+    // pacman at location (9, 13)
+    // ghost at location (9, 12)
+    ghost.attack() -> false
+     ```
 
 ### eatCookie(String name)
 * Return Type: `JComponent`
