@@ -54,12 +54,16 @@ public class Map {
   public boolean move(String name, Location loc, Type type) {
     // update locations, components, and field
     // use the setLocation method for the component to move it to the new location
-    return false;
+   this.components.get(name).setLocation(loc.x, loc.y);
+   this.locations.put(name, loc);
+   if(!field.containsKey(loc)) field.put(loc, new HashSet<Type>());
+   field.get(loc).add(type);
+   return true;
   }
 
   public HashSet<Type> getLoc(Location loc) {
     // wallSet and emptySet will help you write this method
-    return null;
+    return field.get(loc);
   }
 
   public boolean attack(String name) {
@@ -89,8 +93,11 @@ public class Map {
   }
 
   public JComponent eatCookie(String name) {
-    // update locations, components, field, and cookies
-    // the id for a cookie at (10, 1) is tok_x10_y1
-    return null;
+    if(getLoc(name) == PACMAN && getLoc(name) == COOKIE){
+      return components.get(name);
+    } else{
+      return null;
+    }
+
   }
 }
