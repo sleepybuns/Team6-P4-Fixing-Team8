@@ -5,7 +5,7 @@ public class TestPacManInRange extends TestCase {
   
   @Test
   public void testPacManInRange() throws FileNotFoundException {
-    //andrew's test
+    //andrew's tests
     
     Mainframe frame = new MainFrame(); //Creates A New Map With Walls and Tokens Initialized
     Ghost ghost = frame.addGhost(new Location(5, 5), "coolghost", Color.green)
