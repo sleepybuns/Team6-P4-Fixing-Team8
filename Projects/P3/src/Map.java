@@ -66,8 +66,29 @@ public class Map {
     return field.get(loc);
   }
 
-  public boolean attack(String Name) {
+  public boolean attack(String name) {
     // update gameOver
+    // ghost attack pacman 
+    /*
+     * First retrieve ghost  position based on the name 
+     * Retrieve all pacman locations and check with the ghostlocation
+     * if location match then  return true else false.  ghost.x = pacman.x and ghost.y=pacman.y 
+     * need to know . How to retieve pacman locations and ghost locations.
+     *  if the attack matters only when the x-axis match, take the ghost location and loop all teh
+     * pacman where they have the same x-axisgit
+     */
+     
+    if (field.get(locations.get(name)) != null) {
+      // save this tempGhostLoc = locations.get(name)
+      //if(tempGhostLoc.y<=12) conactYaxis = dim -  tempGhostLoc.y;
+      // 12 -> 9, tempGhostLoc.y+conactYaxis -> 9,11->9,12
+      HashSet<Map.Type> temp = field.get(locations.get(name));
+      if(temp != null){
+          if (temp.contains(Map.Type.PACMAN)){
+            return true;
+          }
+      }
+    }
     return false;
   }
 

@@ -18,8 +18,15 @@ public class PacMan {
   }
 
   public boolean move() {
-    return false;
-  }
+
+   if(get_valid_moves().size() > 0) { 
+   return true;
+
+ } else {
+   return false;
+ }
+}
+
 
   public boolean is_ghost_in_range() {
     return false;
@@ -33,3 +40,5 @@ public class PacMan {
     }
   }
 }
+
+
