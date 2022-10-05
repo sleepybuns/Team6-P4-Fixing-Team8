@@ -4,6 +4,8 @@ import junit.framework.*;
 public class TestMapGetLoc extends TestCase {
 
   public void testMapGetLoc() throws FileNotFoundException {
+    // test for map get loc by andrew
+    
     HashSet<Type> result = new HashSet<Type>();
     result.add(Map.Type.GHOST);
     result.add(Map.Type.PACMAN);

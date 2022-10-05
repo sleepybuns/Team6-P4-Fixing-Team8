@@ -4,6 +4,11 @@ import junit.framework.*;
 public class TestConsume extends TestCase {
 
   public void testConsume() throws FileNotFoundException {
-    return null;
+      Mainframe frame = new MainFrame();
+      NoFrame frame = new NoFrame();
+      
+      PacMan pacman = frame.addPacMan(new Location(4, 4));
+
+      assertTrue(pacman.consume()==null);
   }
 }
