@@ -35,6 +35,16 @@ public class PacMan {
 }
 
 
+
+   if(get_valid_moves().size() > 0) { 
+   return true;
+
+ } else {
+   return false;
+ }
+}
+
+
   public boolean is_ghost_in_range() {/*for example, if pacmans location is (6,4)*/
     Location up, down, left, right;
     up = new Location(myLoc.x, myLoc.y - 1);/*(6,3)*/
