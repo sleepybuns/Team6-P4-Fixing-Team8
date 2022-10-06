@@ -4,6 +4,9 @@ import junit.framework.*;
 public class TestAttack extends TestCase {
 
   public void testAttack() throws FileNotFoundException {
-    return null;
-  }
+    Frame frame = new MainFrame();
+    Ghost ghost = frame.addGhost(new Location(5, 2), "Pinky", Color.pink);
+    Pacman pacman = frame.addPacMan(new Location(5,1));
+    assertTrue(ghost.attack());
+    }
 }
