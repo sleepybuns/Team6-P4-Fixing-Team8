@@ -93,11 +93,13 @@ public class Map {
   }
 
   public JComponent eatCookie(String name) {
-    if(getLoc(name) == PACMAN && getLoc(name) == COOKIE){
-      return components.get(name);
-    } else{
-      return null;
+    if(name.equals("pacman") || name.equals("Pacman")){
+      if(field.get(locations.get(name)).contains(Map.Type.COOKIE)){
+        return components.get(name);
+      }
     }
+    return null;
+
 
   }
 }
