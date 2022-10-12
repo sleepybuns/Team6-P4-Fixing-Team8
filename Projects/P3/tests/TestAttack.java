@@ -1,12 +1,13 @@
 import java.io.*;
 import junit.framework.*;
+import java.awt.Color;
 
 public class TestAttack extends TestCase {
 
   public void testAttack() throws FileNotFoundException {
-    Frame frame = new MainFrame();
+    MainFrame frame = new MainFrame();
     Ghost ghost = frame.addGhost(new Location(5, 2), "Pinky", Color.pink);
-    Pacman pacman = frame.addPacMan(new Location(5,1));
+    PacMan pacman = frame.addPacMan(new Location(5,1));
     assertTrue(ghost.attack());
     }
 }

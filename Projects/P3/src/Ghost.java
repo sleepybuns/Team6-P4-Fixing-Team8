@@ -31,7 +31,7 @@ public class Ghost {
       return false;
     }
 
-    int random_move = 0 + (int)(Math.random() * ((2 - 0) + 1));
+    int random_move = 0 + (int)(Math.random() * ((valid_moves.size() - 0) + 1));
 
     Location new_loc = valid_moves.get(random_move);
 
