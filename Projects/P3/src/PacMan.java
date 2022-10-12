@@ -41,8 +41,8 @@ public class PacMan {
     left = new Location(myLoc.x-1, myLoc.y);/*(5,4)*/
     right = new Location(myLoc.x+1, myLoc.y);/*(7,4)*/
 
-    if(getLoc(up) == COOKIE ||getLoc(down) == COOKIE
-    || getLoc(left) == COOKIE || getLoc(right) == COOKIE) {
+    if(myMap.getLoc(up).contains(Map.Type.COOKIE) || myMap.getLoc(down).contains(Map.Type.COOKIE)
+    || myMap.getLoc(left).contains(Map.Type.COOKIE) || myMap.getLoc(right).contains((Map.Type.COOKIE))) {
       return false;
     } else {
       return true;
@@ -52,7 +52,7 @@ public class PacMan {
 
   public JComponent consume() {
     if (myMap.getLoc(myLoc).contains(Map.Type.COOKIE)) {
-        return map.eatCookie(myName);
+        return myMap.eatCookie(myName);
     } else {
       return null;
     }
