@@ -1,4 +1,8 @@
 import java.io.*;
+import java.lang.ProcessBuilder.Redirect.Type;
+import java.util.HashSet;
+import java.awt.Color;
+
 import junit.framework.*;
 
 public class TestMapGetLoc extends TestCase {
@@ -6,18 +10,18 @@ public class TestMapGetLoc extends TestCase {
   public void testMapGetLoc() throws FileNotFoundException {
     // test for map get loc by andrew
     
-    HashSet<Type> result = new HashSet<Type>();
+    HashSet<Map.Type> result = new HashSet<Map.Type>();
     result.add(Map.Type.GHOST);
     result.add(Map.Type.PACMAN);
 
     
-    Mainframe frame = new MainFrame();
-    NoFrame frame = new NoFrame();
+    MainFrame frame = new MainFrame();
+    //NoFrame frame = new NoFrame();
 
     Ghost ghost = frame.addGhost(new Location(4, 4), "coolghost", Color.red);
     PacMan pacman = frame.addPacMan(new Location(4, 4));
 
-    assertEqual(map.getLoc(new Location(4,4)), result);
+    assertEquals(frame.getMap().getLoc(new Location(4,4)), result);
 
 
   }
