@@ -40,6 +40,7 @@ public class PacMan {
     down = new Location(myLoc.x, myLoc.y + 1);/*(6,5)*/
     left = new Location(myLoc.x-1, myLoc.y);/*(5,4)*/
     right = new Location(myLoc.x+1, myLoc.y);/*(7,4)*/
+    
     if(myMap.getLoc(up) != null){
       if(myMap.getLoc(up).contains(Map.Type.COOKIE)){
         return false;
