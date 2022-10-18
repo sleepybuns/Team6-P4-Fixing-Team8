@@ -40,14 +40,27 @@ public class PacMan {
     down = new Location(myLoc.x, myLoc.y + 1);/*(6,5)*/
     left = new Location(myLoc.x-1, myLoc.y);/*(5,4)*/
     right = new Location(myLoc.x+1, myLoc.y);/*(7,4)*/
-
-    if(myMap.getLoc(up).contains(Map.Type.COOKIE) || myMap.getLoc(down).contains(Map.Type.COOKIE)
-    || myMap.getLoc(left).contains(Map.Type.COOKIE) || myMap.getLoc(right).contains((Map.Type.COOKIE))) {
-      return false;
-    } else {
-      return true;
-
+    if(myMap.getLoc(up) != null){
+      if(myMap.getLoc(up).contains(Map.Type.COOKIE)){
+        return false;
+      }
     }
+    if(myMap.getLoc(down) != null){
+      if(myMap.getLoc(down).contains(Map.Type.COOKIE)){
+        return false;
+      }
+    }
+    if(myMap.getLoc(left) != null){
+      if(myMap.getLoc(left).contains(Map.Type.COOKIE)){
+        return false;
+      }
+    }
+    if(myMap.getLoc(right) != null){
+      if(myMap.getLoc(right).contains(Map.Type.COOKIE)){
+        return false;
+      }
+    }
+    return true;
   }
 
   public JComponent consume() {
