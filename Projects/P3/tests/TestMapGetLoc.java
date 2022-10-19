@@ -15,13 +15,13 @@ public class TestMapGetLoc extends TestCase {
     result.add(Map.Type.PACMAN);
 
     
-    MainFrame frame = new MainFrame();
-    //NoFrame frame = new NoFrame();
+    //MainFrame frame = new MainFrame();
+    NoFrame frame = new NoFrame();
 
     Ghost ghost = frame.addGhost(new Location(4, 4), "coolghost", Color.red);
     PacMan pacman = frame.addPacMan(new Location(4, 4));
 
-    assertEquals(frame.getMap().getLoc(new Location(4,4)), result);
+    assertTrue(frame.getMap().getLoc(new Location(4,4)).contains(Map.Type.PACMAN));
 
 
   }

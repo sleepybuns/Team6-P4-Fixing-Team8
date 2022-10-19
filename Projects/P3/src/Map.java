@@ -14,7 +14,7 @@ public class Map {
 
   private HashMap<Location, HashSet<Type>> field;
   private boolean gameOver;
-  private int dim;
+  //private int dim;
 
   private HashMap<String, Location> locations;
   private HashMap<String, JComponent> components;
@@ -33,7 +33,7 @@ public class Map {
     wallSet = new HashSet<Type>();
     emptySet.add(Type.EMPTY);
     wallSet.add(Type.WALL);
-    this.dim = dim;
+    //this.dim = dim;
   }
 
   public void add(String name, Location loc, JComponent comp, Type type) {

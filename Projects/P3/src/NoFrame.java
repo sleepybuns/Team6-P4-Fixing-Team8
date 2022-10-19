@@ -21,12 +21,10 @@ public class NoFrame {
   private ArrayList<Ghost> ghosts = new ArrayList<Ghost>();
   private Color[] colors = {Color.red, Color.cyan, Color.pink, Color.orange};
   private String[] names = {"Blinky", "Inky", "Pinky", "Clyde"};
-  private JLabel scoreboard;
-  private JButton close;
   private Map myMap;
   public int scale = 20;
   public int dim = 30;
-  private int score = 0;
+  public int score = 0;
 
   private boolean continueGame = true;
 
@@ -99,7 +97,7 @@ public class NoFrame {
               public void actionPerformed(ActionEvent e) {
                 if (continueGame) {
                   pacman.move();
-                  JComponent temp = pacman.consume();
+                  //JComponent temp = pacman.consume();
 
                   for (Ghost ghost : ghosts) {
                     ghost.move();
