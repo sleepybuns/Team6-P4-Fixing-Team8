@@ -87,7 +87,7 @@ jobs:
         run: |
           cd Projects/P3
           javac -cp "tests/junit-4.10.jar:src/:tests/" src/*.java tests/*.java
-          java -cp "tests/junit-4.10.jar:src/:tests/" org.junit.runner.JUnitCore TestEatCookie
+          java -cp "tests/junit-4.10.jar:src/:tests/" org.junit.runner.JUnitCore TestMapEatCookie
           
   TestMapMove:
     runs-on: ubuntu-latest
