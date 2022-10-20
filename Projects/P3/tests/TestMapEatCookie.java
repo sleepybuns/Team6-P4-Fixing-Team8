@@ -11,6 +11,6 @@ public class TestMapEatCookie extends TestCase {
     Ghost g = frame.addGhost(new Location(4, 5),"pacman", Color.white);
     CookieComponent c = new CookieComponent(4,4,1);
 
-    assertTrue(frame.getMap().eatCookie("pacman") == null);
+    assertFalse(frame.getMap().eatCookie("pacman") == null);
   }
 }

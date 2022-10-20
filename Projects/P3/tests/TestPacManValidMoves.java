@@ -11,10 +11,10 @@ public class TestPacManValidMoves extends TestCase {
     //ArrayList<Location> valid_moves = pacman.get_valid_moves();
 
     ArrayList<Location> expected = new ArrayList<Location>();
-    expected.add(new Location(9, 12));
+    expected.add(new Location(9, 10));
     expected.add(new Location(10, 11));
     expected.add(new Location(10, 12));
 
-    assertTrue(expected.contains(new Location(9, 12)));
+    assertTrue(expected.contains(new Location(9, 4)));
   }
 }
