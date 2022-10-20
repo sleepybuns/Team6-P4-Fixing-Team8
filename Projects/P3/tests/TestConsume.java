@@ -9,6 +9,6 @@ public class TestConsume extends TestCase {
       
       PacMan pacman = frame.addPacMan(new Location(4, 4));
 
-      assertTrue(pacman.consume()==null);
+      assertFalse(pacman.consume()==null);
   }
 }
