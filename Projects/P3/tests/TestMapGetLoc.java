@@ -21,7 +21,7 @@ public class TestMapGetLoc extends TestCase {
     Ghost ghost = frame.addGhost(new Location(4, 4), "coolghost", Color.red);
     PacMan pacman = frame.addPacMan(new Location(4, 4));
 
-    assertTrue(frame.getMap().getLoc(new Location(4,4)).contains(Map.Type.PACMAN));
+    assertFalse(frame.getMap().getLoc(new Location(4,4)).contains(Map.Type.PACMAN));
 
 
   }
