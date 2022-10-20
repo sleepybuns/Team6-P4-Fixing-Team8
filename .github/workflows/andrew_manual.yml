@@ -1,0 +1,50 @@
+# This is a basic workflow that is manually triggered
+name: Manual workflow
+# Controls when the action will run. Workflow runs when manually triggered using the UI
+# or API.
+on: push
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "greet"
+  greet:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+    container: openjdk
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+    - uses: actions/checkout@v2
+    # Runs a single command using the runners shell
+    - name: Complie Pacman project test files
+      run: |
+        cd Projects/P3
+        javac -cp "src/" src/*.java
+  TestPacManInRange:
+    runs-on: ubuntu-latest
+    container: openjdk
+    steps:
+      - uses: actions/checkout@v2
+      - name: Run TestPacManInRange
+        run: |
+          cd Projects/P3
+          javac -cp "tests/junit-4.10.jar:src/:tests/" src/*.java tests/*.java
+          java -cp "tests/junit-4.10.jar:src/:tests/" org.junit.runner.JUnitCore TestPacManInRange
+  TestConsume:
+    runs-on: ubuntu-latest
+    container: openjdk
+    steps:
+      - uses: actions/checkout@v2
+      - name: Run TestConsume
+        run: |
+          cd Projects/P3
+          javac -cp "tests/junit-4.10.jar:src/:tests/" src/*.java tests/*.java
+          java -cp "tests/junit-4.10.jar:src/:tests/" org.junit.runner.JUnitCore TestConsume
+  TestMapGetLoc:
+    runs-on: ubuntu-latest
+    container: openjdk
+    steps:
+      - uses: actions/checkout@v2
+      - name: Run TestMapGetLoc
+        run: |
+          cd Projects/P3
+          javac -cp "tests/junit-4.10.jar:src/:tests/" src/*.java tests/*.java
+          java -cp "tests/junit-4.10.jar:src/:tests/" org.junit.runner.JUnitCore TestMapGetLoc
