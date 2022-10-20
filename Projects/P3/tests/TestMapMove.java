@@ -9,10 +9,10 @@ public class TestMapMove extends TestCase {
     PacMan pacman = frame.addPacMan(new Location(9, 11));
     
 
-    assertEquals(frame.getMap().move("pacman", new Location (2,4), Map.Type.PACMAN), true);
+    assertEquals(frame.getMap().move("pacman", new Location (2,4), Map.Type.PACMAN), false);
 
     Ghost ghost = frame.addGhost(new Location(2, 4), "name", Color.red);
 
-    assertEquals(frame.getMap().move("pacman", new Location (2,4), Map.Type.PACMAN), false);
+    assertEquals(frame.getMap().move("pacman", new Location (2,4), Map.Type.PACMAN), true);
   }
 }
