@@ -95,14 +95,11 @@ public class Map {
   public JComponent eatCookie(String name) {
     if(name.equals("pacman") || name.equals("Pacman")){
       if(field.get(locations.get(name)).contains(Map.Type.COOKIE)){
-        String cookieName = "tok_x" + locations.get(name).x + "_y" + locations.get(name).y;
-        JComponent retVal = components.remove(cookieName);
-        Location cookieLoc = locations.remove(cookieName);
-        field.get(cookieLoc).remove(Type.COOKIE);
-        cookies++;
-        return retVal;
+        return components.get(name);
       }
     }
     return null;
+
+
   }
 }
