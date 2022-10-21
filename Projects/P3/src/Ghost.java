@@ -74,9 +74,8 @@ public class Ghost {
       if(myMap.attack("pacman")==true) {
         return true;
       }
-      return false;
-    } else {
-      return false;
-    }
+    } 
+    return false;
+    
   }
 }

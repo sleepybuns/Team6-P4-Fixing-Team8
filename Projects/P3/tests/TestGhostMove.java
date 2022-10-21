@@ -9,6 +9,6 @@ public class TestGhostMove extends TestCase {
     NoFrame frame = new NoFrame();
     Ghost ghost = frame.addGhost(new Location(9, 11), "Pinky", Color.pink);
 
-    assertEquals(ghost.move(), false);
+    assertEquals(ghost.move(), true);
   }
 }
