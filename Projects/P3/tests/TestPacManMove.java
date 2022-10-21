@@ -17,7 +17,7 @@ public class TestPacManMove extends TestCase {
     Location newLoc = new Location(1,3);
     
 
-    assertFalse(frame.getMap().getLoc(new Location(1, 3)).contains(Map.Type.PACMAN));
+    assertTrue(frame.getMap().getLoc(new Location(1, 3)).contains(Map.Type.PACMAN));
     
 
   }
