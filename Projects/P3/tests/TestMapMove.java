@@ -13,6 +13,6 @@ public class TestMapMove extends TestCase {
 
     Ghost ghost = frame.addGhost(new Location(2, 4), "name", Color.red);
 
-    assertFalse(frame.getMap().move("pacman", new Location (2,6), Map.Type.GHOST));
+    assertTrue(frame.getMap().move("name", new Location (2,6), Map.Type.GHOST));
   }
 }
