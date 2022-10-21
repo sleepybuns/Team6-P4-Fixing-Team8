@@ -8,6 +8,6 @@ public class TestAttack extends TestCase {
     NoFrame frame = new NoFrame();
     Ghost ghost = frame.addGhost(new Location(5, 2), "Pinky", Color.pink);
     PacMan pacman = frame.addPacMan(new Location(5,1));
-    assertFalse(ghost.attack());
+    assertTrue(ghost.attack());
     }
 }
